@@ -1,47 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="16dp"
+    android:paddingTop="16dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="16dp"
     tools:context=".MainActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0">
 
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="50dp"
+            app:srcCompat="@drawable/logo_app" />
+
         <TextView
             android:id="@+id/appName"
             android:layout_width="wrap_content"
-            android:layout_height="200dp"
-            android:layout_centerHorizontal="false"
-
-            android:text="TipShare"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/app_name"
             android:textColor="#040404"
-            android:textSize="36sp" />
-
-        <RelativeLayout
-            android:layout_width="404dp"
-            android:layout_height="120dp"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="155dp">
-
-            <Button
-                android:id="@+id/button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="170dp"
-                android:background="@color/colorAccent"
-                android:clickable="true"
-                android:fontFamily="serif-monospace"
-                android:text="Calculate Tip"
-                android:textSize="20sp" />
-        </RelativeLayout>
+            android:textSize="34sp" />
 
     </RelativeLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="276dp"
+        android:layout_marginBottom="120dp">
+
+
+        <Button
+            android:id="@+id/calculate_button"
+            android:layout_width="270dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/rounded_button"
+            android:clickable="true"
+            android:fontFamily="sans-serif-black"
+            android:text="@string/button_text"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="4dp"
+            android:text="@string/slogan" />
+
+    </RelativeLayout>
+
+</LinearLayout>
