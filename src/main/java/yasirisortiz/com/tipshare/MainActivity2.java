@@ -5,14 +5,18 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.text.DecimalFormat;
 
 import android.annotation.SuppressLint;
+import android.content.ClipData;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
-import android.view.MotionEvent;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 public class MainActivity2 extends AppCompatActivity {
@@ -32,6 +36,10 @@ public class MainActivity2 extends AppCompatActivity {
     Button tip_20;
     int counter = 1; //Counter for the # of people starting at 1
     TextView showValue;
+    ImageButton settingsButton;
+    ImageButton backButton;
+
+
 
 
     @SuppressLint("ClickableViewAccessibility")
@@ -49,13 +57,40 @@ public class MainActivity2 extends AppCompatActivity {
         tip_10 = findViewById(R.id.tip_10);
         tip_15 = findViewById(R.id.tip_15);
         tip_20 = findViewById(R.id.tip_20);
-
-
-
         showValue = (TextView) findViewById(R.id.totalPeople);
+        settingsButton = findViewById(R.id.settingsButton);
+        backButton= findViewById(R.id.backButton);
         buttonTipColor();
 
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
+        settingsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity2.this,MainActivity3.class);
+                startActivity(intent);
+            }
+        });
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.mymenu, menu);
+        return true;
+//        return super.onCreateOptionsMenu(menu);
+    }
+
+    public void mainActivity3(View v) {
+        Intent i = new Intent(this, MainActivity3.class);
+        startActivity(i);
+    }
+
+
     public void countDownPeople(View view) {
         if (counter > 1) {
             counter--;
@@ -147,7 +182,6 @@ public class MainActivity2 extends AppCompatActivity {
         }
 
     }
-
 
     // Snippet to hide the keyBoard by clicking outside
     public void hideKeyboard(View view) {
