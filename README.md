@@ -1,6 +1,6 @@
 # TipShare
 Tipshare is a tip calculator android app. This app was created to make users'lives easier when it comes to calculating tips.
-Most of the time, customers have to do the math for the tip amoun and write down the accurate total. This is an addordable and
+Most of the time, customers have to do the math for the tip amoun and write down the accurate total. This is an affordable and
 accesible app.
 
 
@@ -11,7 +11,7 @@ stylists, and taxi drivers. Tips can also vary depending on the country and loca
 am trying to solve is that most of the time customers that visit these places don’t have an accessible
 tool to help them calculate the tip that they are supposed to give.
 
-Time spent: **2** days spent in total
+Time spent: **5** days spent in total
 
 ## Features
 
